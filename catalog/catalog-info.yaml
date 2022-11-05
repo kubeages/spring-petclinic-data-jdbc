@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-petclinic-data-jdbc
+  description: Tanzu Java Web App
+  links:
+    - url: http://spring-petclinic-data-jdbc.apps.tap.kubeagesaz.com
+      title: spring-petclinic-data-jdbc
+      icon: dashboard  
+  tags:
+    - app-accelerator
+    - java
+    - spring
+    - web
+    - tanzu
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-petclinic-data-jdbc'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
