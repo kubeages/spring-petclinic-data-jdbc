@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: spring-petclinic-jdbc-mysql
-          image: registry.cloud-garage.net/ages/spring-petclinic-jdbc-mysql
+          image: registry.cloud-garage.net/ages/petclinic
           env:
             - name: DB_HOST
               value: "mysql"
