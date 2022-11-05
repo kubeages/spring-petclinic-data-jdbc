@@ -1,4 +1,4 @@
-apiVersion: kpack.io/v1alpha1
+apiVersion: kpack.io/v1alpha2
 kind: Image
 metadata:
   name: petclinic
@@ -6,6 +6,9 @@ metadata:
 spec:
   build:
     resources: {}
+    env:
+    - name: BP_MAVEN_BUILD_ARGUMENTS
+      value: "package -Dmaven.test.skip=true"
   builder:
     kind: ClusterBuilder
     name: default
@@ -15,7 +18,7 @@ spec:
   serviceAccount: default
   source:
     git:
-      revision: master
-      url: http://gitea.apps.kubeages.com/ages/spring-petclinic-data-jdbc
+      revision: main
+      url: https://github.com/kubeages/spring-petclinic-data-jdbc.git
   successBuildHistoryLimit: 10
-  tag: harbor.apps.kubeages.com/ages/spring-petclinic-jdbc-mysql
+  tag: registry.cloud-garage.net/ages/spring-petclinic-jdbc-mysql
