@@ -1,0 +1,17 @@
+# kustomization.yml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# list of Resource Config to be Applied
+resources:
+  - image.yaml
+  - deployment.yml
+  - service.yml
+  - ingress.yml
+
+# namespace to deploy all Resources to
+namespace: apps
+
+# labels added to all Resources
+commonLabels:
+  app: spring-petclinic-jdbc-mysql

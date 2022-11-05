@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-petclinic-jdbc-mysql
+spec:
+  selector:
+    matchLabels:
+      app: spring-petclinic-jdbc-mysql
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spring-petclinic-jdbc-mysql
+    spec:
+      containers:
+        - name: spring-petclinic-jdbc-mysql
+          image: registry.cloud-garage.net/ages/spring-petclinic-jdbc-mysql
+          env:
+            - name: DB_HOST
+              value: "mysql"
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_USERNAME
+              value: "tanzu"
+            - name: DB_PASSWORD
+              value: "tanzu2022"
+          ports:
+            - containerPort: 8888

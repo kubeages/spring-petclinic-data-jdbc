@@ -1,0 +1,5 @@
+---
+DB_HOST: mysql-petclinic-mariadb
+DB_PORT: 3306
+DB_USERNAME: tanzu
+DB_PASSWORD: "XN3gIxt3XjfPnQIT$"
