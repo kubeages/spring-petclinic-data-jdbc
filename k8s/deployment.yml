@@ -26,4 +26,4 @@ spec:
             - name: DB_PASSWORD
               value: "tanzu2022"
           ports:
-            - containerPort: 8888
+            - containerPort: 8080

@@ -12,6 +12,6 @@ spec:
           service:
             name: spring-petclinic-jdbc-mysql
             port:
-              number: 8888
+              number: 8080
         path: /
         pathType: Prefix                     

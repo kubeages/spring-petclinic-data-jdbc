@@ -6,8 +6,8 @@ metadata:
   name: spring-petclinic-jdbc-mysql
 spec:
   ports:
-    - port: 8888
-      targetPort: 8888
+    - port: 8080
+      targetPort: 8080
   selector:
     app: spring-petclinic-jdbc-mysql
   type: ClusterIP
